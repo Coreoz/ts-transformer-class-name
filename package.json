@@ -21,7 +21,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare-release": "npm run clean && npm run lint && npm run test && npm run build",
+    "release": "release-it"
   },
   "release-it": {
     "hooks": {
