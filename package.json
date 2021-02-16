@@ -22,7 +22,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepare-release": "npm run clean && npm run lint && npm run test && npm run build",
+    "clean": "rm -rf build",
+    "prepare-release": "npm run clean && npm run build",
     "release": "release-it"
   },
   "release-it": {
