@@ -7,7 +7,7 @@
   "repository": "https://github.com/Coreoz/ts-transformer-class-name",
   "homepage": "https://github.com/Coreoz/ts-transformer-class-name",
   "license": "Apache-2.0",
-  "main": "output/index.js",
+  "main": "build/cjs/index.js",
   "devDependencies": {
     "ts-node": "^9.0.0",
     "ttypescript": "^1.5.12",
@@ -21,7 +21,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "npm run tsc:cjs && npm run tsc:esm",
+    "tsc:cjs": "tsc --module commonjs --outDir build/cjs -p tsconfig.json",
+    "tsc:esm": "tsc --module esnext --outDir build/esm -p tsconfig.json",
     "clean": "rm -rf build",
     "prepare-release": "npm run clean && npm run build",
     "release": "release-it"
