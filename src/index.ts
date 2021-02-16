@@ -1,3 +1,3 @@
-import classNameTransformer from "./transformer";
+import classNameTransformer from "./classNameTransformer";
 
 export default classNameTransformer;
