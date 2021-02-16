@@ -6,7 +6,7 @@
   "repository": "https://github.com/Coreoz/ts-transformer-class-name",
   "homepage": "https://github.com/Coreoz/ts-transformer-class-name",
   "license": "Apache-2.0",
-  "main": "build/cjs/*.js",
+  "main": "build/cjs/index.js",
   "typings": "build/esm/index.d.ts",
   "module": "build/esm/index.js",
   "devDependencies": {
