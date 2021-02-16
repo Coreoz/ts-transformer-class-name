@@ -4,7 +4,7 @@ import {CONSTRUCTOR_NAME_SYMBOL_IDENTIFIER} from "./constants";
 /**
  * CustomTransformer that associates constructor arguments with any given class declaration
  */
-export default function classNameTransformer(
+export function classNameTransformer(
     program: ts.Program
 ): ts.TransformerFactory<ts.SourceFile> {
     function transformer(context: ts.TransformationContext): ts.Transformer<ts.SourceFile> {
