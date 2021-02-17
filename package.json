@@ -5,6 +5,11 @@
   "author": "Benjamin Chardin <bchardin@coreoz.com> (https://coreoz.com)",
   "repository": "https://github.com/Coreoz/ts-transformer-classname",
   "homepage": "https://github.com/Coreoz/ts-transformer-classname",
+  "keywords": [
+    "customTransformer",
+    "classname",
+    "ts-transformer"
+  ],
   "license": "Apache-2.0",
   "main": "build/cjs/index.js",
   "typings": "build/esm/index.d.ts",
