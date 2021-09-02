@@ -1,5 +1,5 @@
-import { CONSTRUCTOR_NAME_SYMBOL_IDENTIFIER } from 'plume-ts-di/build/esm/lib/Injector';
 import * as ts from 'typescript'
+import { Injector } from 'plume-ts-di';
 
 /**
  * CustomTransformer that associates constructor arguments with any given class declaration
@@ -19,7 +19,7 @@ export function classNameTransformer(): ts.TransformerFactory<ts.SourceFile> {
                             ],
                             context.factory.createComputedPropertyName(
                                 context.factory.createIdentifier(
-                                    `Symbol.for("${CONSTRUCTOR_NAME_SYMBOL_IDENTIFIER}")`
+                                    `Symbol.for("${Injector.CONSTRUCTOR_NAME_SYMBOL_IDENTIFIER}")`
                                 )
                             ),
                             [],
