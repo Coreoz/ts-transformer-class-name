@@ -1,12 +1,10 @@
+import { CONSTRUCTOR_NAME_SYMBOL_IDENTIFIER } from 'plume-ts-di/build/esm/lib/Injector';
 import * as ts from 'typescript'
-import {CONSTRUCTOR_NAME_SYMBOL_IDENTIFIER} from "./constants";
 
 /**
  * CustomTransformer that associates constructor arguments with any given class declaration
  */
-export function classNameTransformer(
-    program: ts.Program
-): ts.TransformerFactory<ts.SourceFile> {
+export function classNameTransformer(): ts.TransformerFactory<ts.SourceFile> {
     function transformer(context: ts.TransformationContext): ts.Transformer<ts.SourceFile> {
         return (sourceFile: ts.SourceFile): ts.SourceFile => {
             const visitor = (node: ts.Node): ts.Node | undefined => {
