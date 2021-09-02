@@ -29,3 +29,8 @@ After ttypescript is installed, you can reference the transformer in your `tscon
     }
 }
 ```
+
+Release process
+---------------
+1. run `npm login`
+2. run `npm run release` <= yarn **must not** be used
