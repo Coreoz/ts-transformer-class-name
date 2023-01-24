@@ -24,7 +24,20 @@ After ttypescript is installed, you can reference the transformer in your `tscon
 {
     "compilerOptions": {
         "plugins": [
-            { "transform": "ts-transformer-class-name" }
+          { "transform": "ts-transformer-classname", "import": "classNameTransformer" }
+        ]
+    }
+}
+```
+
+DI Compiler adapter
+-------------------
+The adapter for DI [Compiler](https://github.com/wessberg/DI-compiler) is now provided. To use it:
+```json
+{
+    "compilerOptions": {
+        "plugins": [
+          { "transform": "ts-transformer-classname", "import": "diTransformerAdapter" }
         ]
     }
 }
@@ -32,5 +45,4 @@ After ttypescript is installed, you can reference the transformer in your `tscon
 
 Release process
 ---------------
-1. run `npm login`
-2. run `npm run release` <= yarn **must not** be used
+Run `yarn release`

@@ -1,3 +1,2 @@
-import { classNameTransformer } from "./lib/classNameTransformer";
-
-export default classNameTransformer;
+export { classNameTransformer } from './lib/classNameTransformer';
+export { diTransformerAdapter } from './lib/diTransformerAdapter';
